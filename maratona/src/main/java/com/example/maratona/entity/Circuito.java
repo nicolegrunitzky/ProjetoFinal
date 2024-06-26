@@ -1,5 +1,6 @@
 package com.example.maratona.entity;
 
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import lombok.AllArgsConstructor;
