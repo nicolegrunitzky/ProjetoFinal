@@ -21,10 +21,7 @@ public class Maratona {
 
     private String nome;
 
-    @OneToMany(mappedBy = "circuito")
+    @OneToMany(mappedBy = "maratona")
     private List<Circuito> circuitos;
 
-    public Long getId() {
-        return id;
-    }
 }

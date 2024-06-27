@@ -1,10 +1,7 @@
 package com.example.maratona.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
@@ -33,10 +30,7 @@ public class Maratonista {
 
     private String RG;
 
-    @OneToMany(mappedBy = "inscricao")
+    @OneToMany(mappedBy = "maratonista")
     private List<Inscricao> inscricoes;
 
-    public Long getId() {
-        return id;
-    }
 }

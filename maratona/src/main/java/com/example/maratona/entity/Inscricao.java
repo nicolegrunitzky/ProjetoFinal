@@ -17,7 +17,7 @@ public class Inscricao {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private Double valoInscricao;
+    private Double valorInscricao;
 
     @ManyToOne
     private Circuito circuito;
@@ -25,8 +25,13 @@ public class Inscricao {
     @ManyToOne
     private Maratonista maratonista;
 
-    public Long getId() {
-        return id;
+    @Override
+    public String toString() {
+        return "Inscricao{" +
+                "id=" + id +
+                ", valorInscricao=" + valorInscricao +
+                ", circuito=" + circuito +
+                ", maratonista=" + maratonista +
+                '}';
     }
-
 }
