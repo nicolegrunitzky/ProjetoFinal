@@ -21,19 +21,14 @@ public class Circuito {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Min(value=1, message="A idade não pode ser menor de 16 anos!")
-    @Max(value=3, message="A idade não pode ser maior de 50 anos!")
-    private int categoria;
+    private Categoria categoria;
 
     private int distancia;
 
     @ManyToOne
     private Maratona maratona;
 
-    @OneToMany(mappedBy = "inscricao")
+    @OneToMany(mappedBy = "circuito")
     private List<Inscricao> inscricoes;
 
-    public Long getId() {
-        return id;
-    }
 }
